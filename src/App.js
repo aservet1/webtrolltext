@@ -37,7 +37,7 @@ class App extends React.Component {
           <div><input onChange={(event) => this.setState({text: event.target.value})}/></div>
 
           <div><button onClick={ () => this.setState({ trolledText: this.trollify(this.state.text) }) } >
-				{"Submit (click again for version)"}
+				{"Submit (click again for new version)"}
 		  </button></div>
           
           <div> {(this.state.trolledText !== '') ? this.state.trolledText : this.placeholder} </div>
