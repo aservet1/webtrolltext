@@ -6,4 +6,4 @@ Web app for text that you want to tRoLLiFy. Makes it less tedious than mAnUaLlY 
 
 ![image](https://user-images.githubusercontent.com/54599694/126050311-e43e4f8e-7783-4da0-9cfd-707d28688f35.png)
 
-The UI is still very much in progress so the code at any point might not reflect what's in the screenshot, but this showcases the functionality
+The UI is still very much in progress so the code at any point might not reflect what's in the screenshot, but this shows pretty much how it's supposed to work
