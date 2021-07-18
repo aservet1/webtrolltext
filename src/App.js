@@ -47,7 +47,7 @@ class App extends React.Component {
             {"Copy This Text"}
           </button></div>
 
-          <div> Click "Submit" for different versions </div>
+          <div> Click "Submit" as much as you want for different versions </div>
 
           {/*<a
             className="App-link"
