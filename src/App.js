@@ -34,18 +34,20 @@ class App extends React.Component {
               //TODO make a CSS class for the submit buttons
       <div className="App">
         <header className="App-header">
-          <p> Enter text to trollify below: </p>
+          <p> Enter text to trollify: </p>
           <div><input onChange={(event) => this.setState({text: event.target.value})}/></div>
 
           <div><button onClick={ () => this.setState({ trolledText: this.trollify(this.state.text) }) } >
-				{"Submit (click again for new version)"}
-		  </button></div>
-          
+            {"Submit"}
+          </button></div>
+            
           <div> {(this.state.trolledText !== '') ? this.state.trolledText : this.placeholder} </div>
 
-		  <div><button onClick={ () => navigator.clipboard.writeText(this.state.trolledText) } >
-            	{"Copy This Text"}
+          <div><button onClick={ () => navigator.clipboard.writeText(this.state.trolledText) } >
+            {"Copy This Text"}
           </button></div>
+
+          <div> Click "Submit" for different versions </div>
 
           {/*<a
             className="App-link"
