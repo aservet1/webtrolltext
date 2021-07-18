@@ -44,7 +44,7 @@ class App extends React.Component {
           <div> {(this.state.trolledText !== '') ? this.state.trolledText : this.placeholder} </div>
 
 		  <div><button onClick={ () => navigator.clipboard.writeText(this.state.trolledText) } >
-            	{"Clipboard Copy"}
+            	{"Copy This Text"}
           </button></div>
 
           {/*<a
