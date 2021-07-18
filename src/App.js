@@ -30,7 +30,8 @@ class App extends React.Component {
   }
 
   render() {
-    return (
+    return (  //TODO modularize the text data away from the JSX im writing
+              //TODO make a CSS class for the submit buttons
       <div className="App">
         <header className="App-header">
           <p> Enter text to trollify below: </p>
