@@ -1,37 +1,97 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: #282c34;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: darkslategray;
+  flex: 1;
+
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+
+  font-family: Cochin;
 }
 
-.App-header { }
+.App-header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 52px;
+  border: 1px solid black;
 
-/*.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}*/
+  margin: 25px;
+}
 
-/*@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App-footer {
+  padding: 50px;
+  text-align: center;
+  background: #1abc9c;
+  border: 1px solid black;
+
+  margin: 25px;
+}
+
+.App-body {
+  display: flex;
+  color: white;
+  background-color: #5a48ac;
+
+  justify-content: space-between;
+
+  border: 1px solid black;
+  margin: 5px;
+
+  font-size: 28px;
+
+  text-shadow:
+     1px  1px 0 #000,
+    -1px  1px 0 #000,
+     1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+@media screen and (max-width: 1080px) {
+  .App-body {
+    flex-direction: column;
   }
-}*/
+}
 
-/*.App-link {
-  color: #61dafb;
-}*/
+.App-body > * {
+  margin: 5px
+}
 
-/*@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
+.input-section {
+  border: 1px solid black;
+  margin: 5px;
+}
+.input-section > * {
+  margin: 15px;
+}
+
+.output-section {
+  border: 1px solid black;
+  flex-grow: 1;
+  white-space: pre-wrap;
+} .output-section > * {
+  margin: 15px;
+}
+
+#input-box {
+  width: 400px; height: 250px;
+  font-size: 18px
+}
+
+button {
+  border-radius: 8px;
+  font-size: large;
+  background-color: #1abc9c;
+  border: 2px solid black;
+  margin: 5px;
+
+  color: black;
+}
+button:hover {
+  background-color: white;
+}

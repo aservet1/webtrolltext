@@ -3,27 +3,26 @@ import React from 'react';
 
 function Button(props) {
   return (
-    <div>
-      <button
-        id={props.id}
-        onClick={props.onClick}
-      >
-        {props.text}
-      </button>
-    </div>
+    <button
+      id={props.id}
+      onClick={props.onClick}
+    >
+      {props.text}
+    </button>
   );
 }
 
 class App extends React.Component {
 
-  placeholder = '_______________________________' // TODO: make this a box to put the text in instead
+  placeholder = '...';
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       'text': '',
       'trolledText': this.placeholder
-    }
+    };
+    this.prompt = `enter text to ${this.trollify("trollify")}`;
   }
 
   trollify = (txt) => {
@@ -43,51 +42,64 @@ class App extends React.Component {
   }
 
   getTrolledText() {
-    return (this.state.trolledText !== '') ? this.state.trolledText : this.placeholder;
+    return (this.state.trolledText !== '')
+      ? this.state.trolledText
+      : this.placeholder;
+  }
+
+  copyToClipboard = () => {
+    navigator.clipboard.writeText(
+      this.getTrolledText()
+    );
+  }
+
+  submitText = () => {
+    this.setState({
+      trolledText: this.trollify(
+        this.state.text
+      )
+    });
+  }
+
+  handleTextboxTyping = (e) => {
+    this.setState({
+      text: e.target.value
+    });
   }
 
   render() {
-    return (  //TODO modularize the text data away from the JSX im writing
-              //TODO make a CSS class for the submit buttons
+    return (      
       <div className="App">
-        <header className="App-header">
-          TrollText Generator
-        </header>
-        <p> Enter text to trollify: </p>
-        <div>
-          <input
-            onChange={(e) => this.setState({text: e.target.value})}
-          />
+        <div className="App-header">
+          <header>
+            troll text generator
+          </header>
         </div>
+        
+        <div className="App-body">
+          <div className="input-section">
+            <p>{this.prompt}:</p>
+            <textarea
+              id="input-box"
+              onChange={this.handleTextboxTyping}
+            />
+            <Button
+              text = "submit"
+              onClick = {this.submitText}
+            />
+          </div>
 
-        <Button
-          text = "Submit"
-          onClick = {() => this.setState({
-            trolledText: this.trollify(this.state.text)
-          })}
-        />
-          
-        <div>
-          {this.getTrolledText()}
+          <div className="output-section">
+            <div>
+              <Button
+                text = "copy this Text"
+                onClick = {this.copyToClipboard}
+              /> <br/>
+              {this.getTrolledText()}
+            </div>
+          </div>
         </div>
-
-        <Button
-          text = "Copy This Text"
-          onClick = {() => navigator.clipboard.writeText(this.getTrolledText())}
-        />
-
-        <div>
-          {'Click "Submit" as much as you want for different versions'}
-        </div>
-
-        {/*<a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>*/}
+        <footer className="App-footer"/> 
       </div>
     );
   }
