@@ -8,5 +8,5 @@ Web app for text that you want to tRoLLiFy. Makes it less tedious than mAnUaLlY 
   <img src="https://user-images.githubusercontent.com/54599694/126242137-15ea76b6-f043-4a5d-a855-1cf3dbf13802.png"/>
 </p>
 
-### Currently deployed at
+### Currently hosted at
 https://aservet1.github.io/webtrolltext/
