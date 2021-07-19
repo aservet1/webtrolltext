@@ -1,9 +1,22 @@
 import './App.css';
 import React from 'react';
 
+function Button(props) {
+  return (
+    <div>
+      <button
+        id={props.id}
+        onClick={props.onClick}
+      >
+        {props.text}
+      </button>
+    </div>
+  );
+}
+
 class App extends React.Component {
 
-  placeholder = '______________' // TODO: make this a box to put the text in instead
+  placeholder = '_______________________________' // TODO: make this a box to put the text in instead
 
   constructor(props) {
     super(props)
@@ -29,25 +42,41 @@ class App extends React.Component {
     );
   }
 
+  getTrolledText() {
+    return (this.state.trolledText !== '') ? this.state.trolledText : this.placeholder;
+  }
+
   render() {
     return (  //TODO modularize the text data away from the JSX im writing
               //TODO make a CSS class for the submit buttons
       <div className="App">
         <header className="App-header">
           <p> Enter text to trollify: </p>
-          <div><input onChange={(event) => this.setState({text: event.target.value})}/></div>
+          <div>
+            <input
+              onChange={(e) => this.setState({text: e.target.value})}
+            />
+          </div>
 
-          <div><button onClick={ () => this.setState({ trolledText: this.trollify(this.state.text) }) } >
-            {"Submit"}
-          </button></div>
+          <Button
+            text = "Submit"
+            onClick = {() => this.setState({
+              trolledText: this.trollify(this.state.text)
+            })}
+          />
             
-          <div> {(this.state.trolledText !== '') ? this.state.trolledText : this.placeholder} </div>
+          <div>
+            {this.getTrolledText()}
+          </div>
 
-          <div><button onClick={ () => navigator.clipboard.writeText(this.state.trolledText) } >
-            {"Copy This Text"}
-          </button></div>
+          <Button
+            text = "Copy This Text"
+            onClick = {() => navigator.clipboard.writeText(this.getTrolledText())}
+          />
 
-          <div> Click "Submit" as much as you want for different versions </div>
+          <div>
+            {'Click "Submit" as much as you want for different versions'}
+          </div>
 
           {/*<a
             className="App-link"
