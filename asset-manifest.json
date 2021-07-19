@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/webtrolltext/static/css/main.dc565bd5.chunk.css",
+    "main.css": "/webtrolltext/static/css/main.d966fa0a.chunk.css",
     "main.js": "/webtrolltext/static/js/main.5372883d.chunk.js",
     "main.js.map": "/webtrolltext/static/js/main.5372883d.chunk.js.map",
     "runtime-main.js": "/webtrolltext/static/js/runtime-main.e63b71a4.js",
@@ -10,13 +10,13 @@
     "static/js/3.36220c0e.chunk.js": "/webtrolltext/static/js/3.36220c0e.chunk.js",
     "static/js/3.36220c0e.chunk.js.map": "/webtrolltext/static/js/3.36220c0e.chunk.js.map",
     "index.html": "/webtrolltext/index.html",
-    "static/css/main.dc565bd5.chunk.css.map": "/webtrolltext/static/css/main.dc565bd5.chunk.css.map",
+    "static/css/main.d966fa0a.chunk.css.map": "/webtrolltext/static/css/main.d966fa0a.chunk.css.map",
     "static/js/2.a5aa6bac.chunk.js.LICENSE.txt": "/webtrolltext/static/js/2.a5aa6bac.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e63b71a4.js",
     "static/js/2.a5aa6bac.chunk.js",
-    "static/css/main.dc565bd5.chunk.css",
+    "static/css/main.d966fa0a.chunk.css",
     "static/js/main.5372883d.chunk.js"
   ]
 }
