@@ -56,6 +56,9 @@
   .App-body {
     flex-direction: column;
   }
+  #input-box {
+    width:150
+  }
 }
 
 .App-body > * {
