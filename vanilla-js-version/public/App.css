@@ -1,0 +1,102 @@
+body {
+  background-color: darkslategray;
+}
+
+.App {
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: Cochin;
+}
+
+.App-header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 52px;
+  border: 1px solid black;
+
+  margin: 25px;
+}
+
+.App-footer {
+  padding: 50px;
+  text-align: center;
+  background: #1abc9c;
+  border: 1px solid black;
+
+  margin: 25px;
+}
+
+.App-body {
+  display: flex;
+  color: white;
+  background-color: #5a48ac;
+
+  justify-content: space-between;
+
+  border: 1px solid black;
+  margin: 5px;
+
+  font-size: 28px;
+
+  text-shadow:
+     1px  1px 0 #000,
+    -1px  1px 0 #000,
+     1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+@media screen and (max-width: 575.98px) {
+  .App-body {
+    flex-direction: column;
+  }
+  /*textarea {
+    width:100px;
+    height:250px;
+    font-size:10px;
+  }*/
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  font-size: 18px
+}
+
+.App-body > * {
+  margin: 5px
+}
+
+.input-section {
+  border: 1px solid black;
+  margin: 5px;
+}
+.input-section > * {
+  margin: 15px;
+}
+
+.output-section {
+  border: 1px solid black;
+  flex-grow: 1;
+  white-space: pre-wrap;
+} .output-section > * {
+  margin: 15px;
+}
+
+button {
+  border-radius: 8px;
+  font-size: large;
+  background-color: #1abc9c;
+  border: 1px solid black;
+  margin: 5px;
+
+  color: black;
+}
+button:hover {
+  background-color: white;
+}
