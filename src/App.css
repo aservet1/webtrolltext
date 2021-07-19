@@ -9,10 +9,6 @@ body,html{
   flex-direction: column;
   justify-content: space-between;
 
-  /*position: absolute;
-  top: 0; left: 0;
-  height: 100%; width: 100%;*/
-
   font-family: Cochin;
 }
 
@@ -55,18 +51,21 @@ body,html{
     -1px -1px 0 #000;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 575.98px) {
   .App-body {
     flex-direction: column;
   }
-  #input-box {
-    width:150
-  }
-  /*.App {
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%; width: 100%;
+  /*textarea {
+    width:100px;
+    height:250px;
+    font-size:10px;
   }*/
+}
+
+textarea {
+  width: 400px;
+  height: 200px;
+  font-size: 18px
 }
 
 .App-body > * {
@@ -87,11 +86,6 @@ body,html{
   white-space: pre-wrap;
 } .output-section > * {
   margin: 15px;
-}
-
-#input-box {
-  width: 450px; height: 250px;
-  font-size: 18px
 }
 
 button {

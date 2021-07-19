@@ -80,7 +80,7 @@ class App extends React.Component {
           <div className="input-section">
             <p>{this.prompt}:</p>
             <textarea
-              id="input-box"
+              
               onChange={this.handleTextboxTyping}
             />
             <Button
@@ -94,8 +94,10 @@ class App extends React.Component {
               <Button
                 text = "copy this Text"
                 onClick = {this.copyToClipboard}
-              /> <br/>
-              {this.getTrolledText()}
+              />
+              <div>
+                {this.getTrolledText()}
+              </div>
             </div>
           </div>
         </div>
