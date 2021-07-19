@@ -22,7 +22,7 @@ class App extends React.Component {
       'text': '',
       'trolledText': this.placeholder
     };
-    this.prompt = `enter text to ${this.trollify("trollify")}`;
+    this.prompt = `enter text to ${this.trollify("trollify")}:`;
   }
 
   trollify = (txt) => {
@@ -78,11 +78,8 @@ class App extends React.Component {
         
         <div className="App-body">
           <div className="input-section">
-            <p>{this.prompt}:</p>
-            <textarea
-              
-              onChange={this.handleTextboxTyping}
-            />
+            <p>{this.prompt}</p>
+            <textarea onChange={this.handleTextboxTyping} />
             <Button
               text = "submit"
               onClick = {this.submitText}
