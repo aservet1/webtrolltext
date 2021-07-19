@@ -1,14 +1,17 @@
+body,html{
+  background-color: darkslategray;
+}
+
 .App {
+  flex: 1;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px;
-  background-color: darkslategray;
-  flex: 1;
 
-  position: absolute;
+  /*position: absolute;
   top: 0; left: 0;
-  height: 100%; width: 100%;
+  height: 100%; width: 100%;*/
 
   font-family: Cochin;
 }
@@ -59,6 +62,11 @@
   #input-box {
     width:150
   }
+  /*.App {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+  }*/
 }
 
 .App-body > * {
@@ -82,7 +90,7 @@
 }
 
 #input-box {
-  width: 300px; height: 250px;
+  width: 450px; height: 250px;
   font-size: 18px
 }
 
