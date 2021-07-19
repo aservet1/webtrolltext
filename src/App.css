@@ -1,4 +1,4 @@
-body,html{
+body {
   background-color: darkslategray;
 }
 
@@ -63,8 +63,8 @@ body,html{
 }
 
 textarea {
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   font-size: 18px
 }
 
